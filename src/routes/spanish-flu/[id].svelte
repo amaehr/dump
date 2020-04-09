@@ -28,6 +28,7 @@
 		so we have to use the :global(...) modifier to target
 		all elements inside .content
 	*/
+  /*
   .content :global(h2) {
     font-size: 1.4em;
     font-weight: 500;
@@ -52,6 +53,80 @@
 
   .content :global(li) {
     margin: 0 0 0.5em 0;
+  }*/
+
+  h3 {
+    color: brown;
+  }
+
+  h4 {
+    font-size: 44pt;
+  }
+
+  p {
+    font-size: 7pt;
+    text-align: block;
+  }
+
+  small {
+  }
+
+  html,
+  body,
+  .grid-container {
+	margin: 0;
+  }
+
+  .grid-container * {
+    border: 1px solid red;
+    position: relative;
+  }
+
+  .grid-container *:after {
+    /*content: attr(class);*/
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr 80px;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-areas: ". . up . ." "right content content content left" "mute map down . about";
+  }
+
+  .right {
+    grid-area: right;
+  }
+
+  .up {
+    grid-area: up;
+  }
+
+  .down {
+    grid-area: down;
+  }
+
+  .left {
+    grid-area: left;
+  }
+
+  .mute {
+    grid-area: mute;
+  }
+
+  .map {
+    grid-area: map;
+  }
+
+  .about {
+    grid-area: about;
+  }
+
+  .content {
+    grid-area: content;
   }
 </style>
 
