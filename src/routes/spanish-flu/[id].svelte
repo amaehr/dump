@@ -62,7 +62,7 @@
   <div class="content">
     <h3>{room.title}</h3>
     <p>{room.text}</p>
-    {#if room.images !== undefined}
+    {#if room.images}
       {#each room.images as image}
         <picture>{image.media}</picture>
         <p>Rights: {image.rights}</p>
@@ -74,22 +74,22 @@
   <div class="map">Map Button</div>
   <div class="about">About Button</div>
   <div class="left">
-    {#if room.left !== undefined}
+    {#if room.left}
       <a rel="prefetch" href="spanish-flu/{room.left}">Left</a>
     {/if}
   </div>
   <div class="right">
-    {#if room.right !== undefined}
+    {#if room.right}
       <a rel="prefetch" href="spanish-flu/{room.right}">Right</a>
     {/if}
   </div>
   <div class="up">
-    {#if room.up !== undefined}
+    {#if room.up}
       <a rel="prefetch" href="spanish-flu/{room.up}">Up</a>
     {/if}
   </div>
   <div class="down">
-    {#if room.down !== undefined}
+    {#if room.down}
       <a rel="prefetch" href="spanish-flu/{room.down}">Down</a>
     {/if}
   </div>
