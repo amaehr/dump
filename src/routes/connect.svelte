@@ -59,18 +59,18 @@
     });
     let janus = new Janus({
       server: [
-        "wss://" + window.location.hostname + ":2096",
-        "ws://" + window.location.hostname + ":2095",
         "https://" + window.location.hostname + ":8443/janus",
-        "http://" + window.location.hostname + ":8080/janus"
+        "http://" + window.location.hostname + ":8080/janus",
+        "wss://" + window.location.hostname + ":2096",
+        "ws://" + window.location.hostname + ":2095"
       ],
+      // iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
       // iceServers: [
-      //   "stun.solnet.ch:3478",
-      //   "stun.l.google.com:19302",
-      //   "stun1.l.google.com:19302",
-      //   "stun2.l.google.com:19302",
-      //   "stun3.l.google.com:19302",
-      //   "stun4.l.google.com:19302"
+      //   "stun:stun.l.google.com:19302",
+      //   "stun:stun1.l.google.com:19302",
+      //   "stun:stun2.l.google.com:19302",
+      //   "stun:stun3.l.google.com:19302",
+      //   "stun:stun4.l.google.com:19302",
       // ],
       success: function() {
         // Done! attach to plugin XYZ
@@ -169,16 +169,7 @@
                 ) {
                   if (msg["error_code"] === 485) {
                     // This is a "no such room" error: give a more meaningful description
-                    alert(
-                      "<p>Apparently room <code>" +
-                        myroom +
-                        "</code> (the one this demo uses as a test room) " +
-                        "does not exist...</p><p>Do you have an updated <code>janus.plugin.audiobridge.jcfg</code> " +
-                        "configuration file? If not, make sure you copy the details of room <code>" +
-                        myroom +
-                        "</code> " +
-                        "from that sample in your current configuration file, then restart Janus and try again."
-                    );
+                    alert("<p>Room " + room_number + " does not exist...");
                   } else {
                     alert(msg["error"]);
                   }
@@ -244,16 +235,20 @@
 <h1>Audiochat</h1>
 
 <p>Hopefully soon</p>
+<p>
+  <button on:click={create_room}>create room:</button>
 
-<button on:click={create_room}>create room {room_number}</button>
+  <input type="number" bind:value={room_number} min="2000" max="999999" />
+</p>
+<!-- <input type="number" bind:value={room_number} /> -->
+<p>
+  <button on:click={join_room}>join room:</button>
 
-<!-- <input type="number" bind:value={room_number} />
-<input type="number" bind:value={room_number} min="2000" max="999999" /> -->
-
-<button on:click={join_room}>join room</button>
-
+  <input type="number" bind:value={room_number} min="2000" max="999999" />
+</p>
 <button on:click={join_public}>join public</button>
 
 <!-- <button on:click={publish_stream}>talk</button> -->
-
-<button on:click={mute}>mute/unmute</button>
+<p>
+  <button on:click={mute}>mute/unmute</button>
+</p>
