@@ -228,6 +228,9 @@
 <h1>Audiochat</h1>
 
 <p>Hopefully soon</p>
+
+<p><a rel=prefetch href='/'>Start</a></p>
+
 <p>
   <button on:click={create_room}>create room:</button>
 
