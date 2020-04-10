@@ -8,6 +8,10 @@
 		margin: 0 auto;
 		box-sizing: border-box;
 	}*/
+
+
+	/* https://svelte.dev/examples#slots */
 </style>
+
 
 <slot></slot>

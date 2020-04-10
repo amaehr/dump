@@ -119,6 +119,7 @@
 
   .map {
     grid-area: map;
+    /* https://svelte.dev/examples#modal */
   }
 
   .about {
