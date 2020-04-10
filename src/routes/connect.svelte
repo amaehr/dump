@@ -196,6 +196,7 @@
             // We have a remote stream (working PeerConnection!) to display
             Janus.debug(" ::: Got a remote stream :::");
             Janus.debug(stream);
+            Janus.attachMediaStream(stream);
           },
           oncleanup: function() {
             // PeerConnection with the plugin closed, clean the UI
