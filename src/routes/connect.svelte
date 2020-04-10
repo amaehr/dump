@@ -33,6 +33,21 @@
     await mixer.send({ message: mute });
   }
 
+  function publish_stream() {
+    mixer.createOffer({
+      media: { video: false }, // This is an audio only room
+      success: function(jsep) {
+        Janus.debug("Got SDP!");
+        Janus.debug(jsep);
+        var publish = { request: "configure", muted: false };
+        mixertest.send({ message: publish, jsep: jsep });
+      },
+      error: function(error) {
+        Janus.error("WebRTC error:", error);
+      }
+    });
+  }
+
   onMount(() => {
     Janus.init({
       // TODO remove
@@ -123,11 +138,13 @@
 
 <button on:click={create_room}>create room {room_number}</button>
 
-<input type=number bind:value={room_number} />
-<input type=number bind:value={room_number} min=2000 max=999999>
+<!-- <input type="number" bind:value={room_number} />
+<input type="number" bind:value={room_number} min="2000" max="999999" /> -->
 
 <button on:click={join_room}>join room</button>
 
 <button on:click={join_public}>join public</button>
+
+<button on:click={publish_stream}>talk</button>
 
 <button on:click={mute}>mute/unmute</button>
