@@ -59,10 +59,10 @@
     });
     let janus = new Janus({
       server: [
-        "https://" + window.location.hostname + ":8443/janus",
-        "http://" + window.location.hostname + ":8080/janus",
         "wss://" + window.location.hostname + ":2096",
-        "ws://" + window.location.hostname + ":2095"
+        "ws://" + window.location.hostname + ":2095",
+        "https://" + window.location.hostname + ":8443/janus",
+        "http://" + window.location.hostname + ":8080/janus"
       ],
       // iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
       // iceServers: [
