@@ -54,7 +54,7 @@
   onMount(() => {
     Janus.init({
       // TODO remove
-      debug: true,
+      debug: "all",
       dependencies: Janus.useDefaultDependencies()
     });
     let janus = new Janus({
@@ -64,14 +64,6 @@
         "https://" + window.location.hostname + ":8443/janus",
         "http://" + window.location.hostname + ":8080/janus"
       ],
-      // iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
-      // iceServers: [
-      //   "stun:stun.l.google.com:19302",
-      //   "stun:stun1.l.google.com:19302",
-      //   "stun:stun2.l.google.com:19302",
-      //   "stun:stun3.l.google.com:19302",
-      //   "stun:stun4.l.google.com:19302",
-      // ],
       success: function() {
         // Done! attach to plugin XYZ
         janus.attach({
@@ -85,11 +77,11 @@
             Janus.error("  -- Error attaching plugin...", cause);
           },
           consentDialog: function(on) {
-            // e.g., Darken the screen if on=true (getUserMedia incoming), restore it otherwise
             Janus.debug(
               "Consent dialog should be " + (on ? "on" : "off") + " now"
             );
             if (on) {
+              // TODO implement help
               Janus.error("Consent missing?");
             }
           },
