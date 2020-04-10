@@ -2,23 +2,49 @@
   import { onMount } from "svelte";
   import { Janus } from "janus-gateway";
 
+  // Client variables
   let mixer = null;
-  let janus = null;
+  let muted = false;
+  let room_number = Math.floor(Math.random() * (999999 - 2000)) + 2000;
+
+  function create_room() {
+    let content = { request: "create", room: room_number };
+    mixer.send({ message: content });
+  }
+
+  async function join_room() {
+    let content = { request: "join", room: room_number };
+    await mixer.send({ message: content });
+  }
+
+  async function join_public() {
+    let content = { request: "join", room: 1234 };
+    await mixer.send({ message: content });
+  }
+
+  function number_of_participants(room) {
+    let content = { request: "listparticipants", room: room };
+    mixer.send({ message: content });
+  }
+
+  async function mute() {
+    muted = !muted;
+    let mute = { request: "configure", muted: muted };
+    await mixer.send({ message: mute });
+  }
 
   onMount(() => {
     Janus.init({
+      // TODO remove
       debug: true,
-      dependencies: Janus.useDefaultDependencies(),
-      callback: function() {
-        console.log("init success");
-      }
+      dependencies: Janus.useDefaultDependencies()
     });
     let janus = new Janus({
       server: [
-        "wss://localhost:2096",
-        "ws://localhost:2095",
-        "https://localhost:8443/janus",
-        "http://localhost:8080/janus"
+        "wss://" + window.location.hostname + ":2096",
+        "ws://" + window.location.hostname + ":2095",
+        "https://" + window.location.hostname + ":8443/janus",
+        "http://" + window.location.hostname + ":8080/janus"
       ],
       iceServers: [
         "stun.solnet.ch:3478",
@@ -35,7 +61,6 @@
           success: function(pluginHandle) {
             // Plugin attached! 'pluginHandle' is our handle
             mixer = pluginHandle;
-            Janus.log("Plugin attached!", pluginHandle);
           },
           error: function(cause) {
             // Couldn't attach to the plugin
@@ -47,7 +72,7 @@
               "Consent dialog should be " + (on ? "on" : "off") + " now"
             );
             if (on) {
-              alert("consent missing");
+              Janus.error("Consent missing?");
             }
           },
           onmessage: function(msg, jsep) {
@@ -57,6 +82,10 @@
             Janus.debug(msg);
             var event = msg["audiobridge"];
             Janus.debug("Event: " + event);
+            if (event === "joined" || event === "created") {
+              room_number = msg["room"];
+              console.log(room_number);
+            }
           },
           onlocalstream: function(stream) {
             // We have a local stream (getUserMedia worked!) to display
@@ -83,24 +112,6 @@
       }
     });
   });
-
-  let room = null
-
-  function register() {
-    // let register = { request: "join", room: 1234};
-    let register = { request: "join"};
-    mixer.send({ message: register });
-
-  }
-
-  let muted = false
-  function mute() {
-    // let register = { request: "join", room: 1234};
-    // mixer.send({ message: register });
-    muted = !muted
-    let mute = { request: "configure", muted: muted};
-    mixer.send({ message: mute});
-  }
 </script>
 
 <svelte:head>
@@ -110,11 +121,13 @@
 
 <p>Hopefully soon</p>
 
+<button on:click={create_room}>create room {room_number}</button>
 
-<button on:click={register}>
-join room
-</button>
+<input type=number bind:value={room_number} />
+<input type=number bind:value={room_number} min=2000 max=999999>
 
-<button on:click={mute}>
-mute/unmute
-</button>
+<button on:click={join_room}>join room</button>
+
+<button on:click={join_public}>join public</button>
+
+<button on:click={mute}>mute/unmute</button>
