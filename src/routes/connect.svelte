@@ -58,10 +58,16 @@
       dependencies: Janus.useDefaultDependencies()
     });
     let janus = new Janus({
+      // server: [
+      //   "wss://" + window.location.hostname + ":8188",
+      //   "ws://" + window.location.hostname + ":8989",
+      //   "https://" + window.location.hostname + ":8089/janus",
+      //   "http://" + window.location.hostname + ":8088/janus"
+      // ],
       server: [
         "wss://" + window.location.hostname + ":2096",
-        "ws://" + window.location.hostname + ":2095",
         "https://" + window.location.hostname + ":8443/janus",
+        "ws://" + window.location.hostname + ":2095",
         "http://" + window.location.hostname + ":8080/janus"
       ],
       success: function() {
@@ -229,7 +235,9 @@
 
 <p>Hopefully soon</p>
 
-<p><a rel=prefetch href='/'>Start</a></p>
+<p>
+  <a rel="prefetch" href="/">Start</a>
+</p>
 
 <p>
   <button on:click={create_room}>create room:</button>
