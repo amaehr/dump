@@ -65,10 +65,10 @@
       //   "http://" + window.location.hostname + ":8088/janus"
       // ],
       server: [
-        "wss://" + window.location.hostname + ":2096",
         "https://" + window.location.hostname + ":8443/janus",
+        "wss://" + window.location.hostname + ":2096",
+        "http://" + window.location.hostname + ":8080/janus",
         "ws://" + window.location.hostname + ":2095",
-        "http://" + window.location.hostname + ":8080/janus"
       ],
       success: function() {
         // Done! attach to plugin XYZ
