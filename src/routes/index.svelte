@@ -1,12 +1,3 @@
-<style>
-	p {
-		text-align: center;
-		margin: 0 auto;
-	}
-
-
-</style>
-
 <svelte:head>
 	<title>open-museum</title>
 </svelte:head>

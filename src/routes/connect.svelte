@@ -59,9 +59,9 @@
     });
     let janus = new Janus({
       // server: [
-      //   "wss://" + window.location.hostname + ":8188",
-      //   "ws://" + window.location.hostname + ":8989",
+      //   "wss://" + window.location.hostname + ":8989",
       //   "https://" + window.location.hostname + ":8089/janus",
+      //   "ws://" + window.location.hostname + ":8188",
       //   "http://" + window.location.hostname + ":8088/janus"
       // ],
       server: [
