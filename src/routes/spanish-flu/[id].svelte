@@ -517,22 +517,31 @@ too small or big for respectively narrow or wide screens */
   </ModalText>
 {:else if showImage1}
   <Modal on:close={() => (showImage1 = false)}>
-    <img class="image1_img" src="/images/objects/{room.image1}.jpg" alt="" />
+    <img
+      src="/images/objects/{room.image1}.jpg"
+      style="max-width: 100%; max-height: 100%;"
+      alt="" />
   </Modal>
 {:else if showImage2}
   <Modal on:close={() => (showImage2 = false)}>
-    <img class="image1_img" src="/images/objects/{room.image2}.jpg" alt="" />
+    <img
+      src="/images/objects/{room.image2}.jpg"
+      style="max-width: 100%; max-height: 100%;"
+      alt="" />
   </Modal>
 {:else if showImageLandscape}
   <Modal on:close={() => (showImageLandscape = false)}>
     <img
-      class="image1_img"
       src="/images/objects/{room.image_landscape}.jpg"
+      style="max-width: 100%; max-height: 100%;"
       alt="" />
   </Modal>
 {:else if showMap}
   <Modal on:close={() => (showMap = false)}>
-    <img class="image1_img" src="/images/floormap.png" alt="" />
+    <img
+      src="/images/floormap.png"
+      style="max-width: 100%; max-height: 100%;"
+      alt="" />
   </Modal>
 {:else}
   <div class="grid-container">
@@ -629,11 +638,11 @@ too small or big for respectively narrow or wide screens */
           <div class="small">{room.rights}</div>
         </div>
       {/if}
-      {#if room.landscape}
+      {#if room.image_landscape}
         <div class="image_landscape">
 
           <img
-            src="/images/objects/{room.landscape}.jpg"
+            src="/images/objects/{room.image_landscape}.jpg"
             alt=""
             on:click={() => (showImageLandscape = true)} />
 

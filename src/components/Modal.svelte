@@ -40,21 +40,21 @@
 
 <style>
   .modal-background {
+    text-align: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-	height: 100%;
-	max-width: 100%;
-	max-height: 100%;
-    background:rgb(0, 20, 0);
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    background: rgb(0, 20, 0);
     z-index: 9;
   }
-
 </style>
 
 <svelte:window on:keydown={handle_keydown} />
 
 <div class="modal-background" on:click={close}>
-  <slot /></div>
-
+  <slot />
+</div>
