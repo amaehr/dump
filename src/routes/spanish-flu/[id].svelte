@@ -434,7 +434,7 @@ too small or big for respectively narrow or wide screens */
     {/if}
     {#if room.image}
       <div class="image1">
-        <a href="">
+        <a href="#">
           <img
             class="image1_img"
             src="/images/objects/{room.image}.jpg"
@@ -444,7 +444,7 @@ too small or big for respectively narrow or wide screens */
     {/if}
     {#if room.image_alternative}
       <div class="image2">
-        <a href="">
+        <a href="#">
           <img src="/images/objects/{room.image_alternative}.jpg" alt="" />
         </a>
       </div>
