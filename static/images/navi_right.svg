@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 0 282 512"
-   height="512"
-   width="282"
-   id="svg2"
-   version="1.1">
-  <metadata
-     id="metadata8">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs6" />
-  <g
-     id="g10">
-    <image
-       id="image12"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARoAAAIACAYAAABdFqPaAAAVmElEQVR4AezdA5AERxSH8S+2bdu2
+<svg height="512" viewBox="0 0 282 512" width="282" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image height="512" image-rendering="optimizeQuality" preserveAspectRatio="none" width="282" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARoAAAIACAYAAABdFqPaAAAVmElEQVR4AezdA5AERxSH8S+2bdu2
 ndxNb29s27Zt27Zt27ZtG5tXdVMM77Y3/KbqV6+7jN3/oIWXl9f//uoH5h4Y8ojQNXGYEfLskOaA
 ak7Ic/VozN1LC0L3KpB2BZKkf53pBoDm6LDYdFBV0L1sWBHSSpBXhsYqf15aA5pbRT063AONd8OX
 4bvwA+Qfo7ba8DLQ+MeR1Fwr6rHh5F+XzoB8dbQfj/ohpK8LhUJ5/7SgkZQnj3pm+Dj8EFqFGDSS
@@ -125,11 +95,4 @@ rod7a4PQQLHRbrl+MKL9MteLRUZoKORFeLMbIoY9on80Yu78JDRAlb7rjc9VzT07op2cbhAaoNjW
 KTRAYXQetnPEcOPk+IrvpuOKD+kSGmB2ecSWrRH9mxHtDxFzJ+V6ndAAhcdY9AMj2ktvPDunH1r8
 lk6hAd9eDfeKaA9Pr4mYOyLXq4QGKLLboogD1uX1zSfPXn0lXZhuEBqg2PTCiNEdJ594fpx+l9dH
 pouLIiQ0wL5rIvreef2SXD8R0T6TvjuJzxVCAxR9nd53ipi9Z0R7SF4/KtfH5/rKySeg89J1BaEB
-xOegFRGb7xCx5d4R/UERc9MTWyPaiyMGP8z1zEmEbthRaP4DjkggGjFViYQAAAAASUVORK5CYII=
-"
-       style="image-rendering:optimizeQuality"
-       preserveAspectRatio="none"
-       height="512"
-       width="282" />
-  </g>
-</svg>
+xOegFRGb7xCx5d4R/UERc9MTWyPaiyMGP8z1zEmEbthRaP4DjkggGjFViYQAAAAASUVORK5CYII="/></svg>

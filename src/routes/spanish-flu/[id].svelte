@@ -17,6 +17,13 @@
 
 <script>
   export let room;
+  import Modal from "./../../components/Modal.svelte";
+  import ModalText from "./../../components/ModalText.svelte";
+  let showAbout = false;
+  let showImage1 = false;
+  let showImage2 = false;
+  let showImageLandscape = false;
+  let showMap = false;
 </script>
 
 <style>
@@ -368,7 +375,110 @@ too small or big for respectively narrow or wide screens */
   <title>{room.title}</title>
 </svelte:head>
 
-<div class="grid-container ">
+{#if showAbout}
+  <ModalText on:close={() => (showAbout = false)}>
+    <h4>About</h4>
+    <small>
+      Das open-museum ist ein unabhängiges digitales Museum und ist im Rahmen
+      des #VersusVirus-Hackathon innerhalb von 48 Stunden entstanden. Es ist uns
+      ein Anliegen, dass trotz der Einschränkungen im Rahmen der
+      Covid-19-Pandemie Kunst und Kultur gemeinsam entdeckt werden können. Die
+      Audiochat-Funktion ermöglicht die Kommunikation mit anderen Besucher*innen
+      - fast wie in einem “echten” Museum.
+    </small>
+    <br />
+
+    <small>
+      Unser Museum baut vollständig auf gemeinfreien Inhalten auf.
+      <a href="https://collections.open-museum.ch/" target="_blank">Hier</a>
+      kannst du in unserer Sammlung stöbern. Kennst du weitere gemeinfreie
+      Inhalte (Fotos, Dokumente, Zeugnisse, Videos etc.), die unsere Ausstellung
+      zur Spanischen Grippe ergänzen könnten? Schreib uns eine E-Mail.
+    </small>
+    <br />
+
+    <small>
+      Der
+      <a href="https://github.com/open-museum/open-museum.ch" target="_blank">
+        Quellcode
+      </a>
+      von open-museum ist offen und kann heruntergeladen werden. Angaben zur
+      Lizenz und zu den verwendeten Bibliotheken finden sich ebenfalls unter
+      dieser Adresse.
+    </small>
+    <br />
+
+    <small>
+      Der Inhalt darf, sofern nicht anders angegeben, unter den Bedingungen von
+      <a
+        href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+        target="_blank">
+        CC-BY-SA-NC 4.0
+      </a>
+      weiterverwendet werden.
+    </small>
+    <br />
+
+    <small>Konzept: Moritz Mähr, Maja Škrkić, Selina Stuber</small>
+    <br />
+    <small>Kuration und Redaktion: Maja Škrkić, Selina Stuber</small>
+    <br />
+    <small>
+      Recherche und Texte: Manuela Coldesina, Henrike Hoffmann, Michael Kempf
+    </small>
+    <br />
+    <small>Gestaltung: Aline Mähr, Johanna Ott</small>
+    <br />
+    <small>Programmierung: Aline Mähr, Moritz Mähr</small>
+    <br />
+
+    <h4>Kontakt</h4>
+
+    <small>info@open-museum.ch</small>
+    <br />
+    <small>open-museum.ch</small>
+    <br />
+
+    <h4>Impressum / Urheberrechte</h4>
+
+    <small>IG open-museum.ch</small>
+    <br />
+    <small>c/o Maja Škrkić</small>
+    <br />
+    <small>Stauffacherstrasse 98</small>
+    <br />
+    <small>CH-8004 Zürich</small>
+  </ModalText>
+{/if}
+
+{#if showImage1}
+  <Modal on:close={() => (showImage1 = false)}>
+    <img class="image1_img" src="/images/objects/{room.image1}.jpg" alt="" />
+  </Modal>
+{/if}
+
+{#if showImage2}
+  <Modal on:close={() => (showImage2 = false)}>
+    <img class="image1_img" src="/images/objects/{room.image2}.jpg" alt="" />
+  </Modal>
+{/if}
+
+{#if showImageLandscape}
+  <Modal on:close={() => (showImageLandscape = false)}>
+    <img
+      class="image1_img"
+      src="/images/objects/{room.image_landscape}.jpg"
+      alt="" />
+  </Modal>
+{/if}
+
+{#if showMap}
+  <Modal on:close={() => (showMap = false)}>
+    <img class="image1_img" src="/images/floormap.png" alt="" />
+  </Modal>
+{/if}
+
+<div class="grid-container">
   {#if room.up}
     <div class="up big">
       <a href="/spanish-flu/{room.up}">
@@ -402,21 +512,17 @@ too small or big for respectively narrow or wide screens */
     <div class="right_background" />
   {/if}
   <div class="mute big">
-    <a href="#">
-      <img src="images/mute.svg" alt=" " />
-    </a>
-
+    <img src="images/mute.svg" alt=" " />
   </div>
-
   <div class="map big">
-    <a href="#">
-      <img src="images/map.svg" alt=" " />
-    </a>
+    <img src="images/map.svg" alt=" " on:click={() => (showMap = true)} />
   </div>
   <div class="about big">
-    <a href="#">
-      <img class="about" src="images/logo.svg" alt=" " />
-    </a>
+    <img
+      class="about"
+      src="images/logo.svg"
+      alt=""
+      on:click={() => (showAbout = true)} />
   </div>
   <div class="content_text">
     <!-- Icon-->
@@ -432,27 +538,31 @@ too small or big for respectively narrow or wide screens */
         <h3>{room.title}</h3>
       </div>
     {/if}
-    {#if room.image}
+    {#if room.image1}
       <div class="image1">
-        <a href="#">
-          <img
-            class="image1_img"
-            src="/images/objects/{room.image}.jpg"
-            alt="" />
-        </a>
+
+        <img
+          class="image1_img"
+          src="/images/objects/{room.image1}.jpg"
+          alt=""
+          on:click={() => (showImage1 = true)} />
+
       </div>
     {/if}
-    {#if room.image_alternative}
+    {#if room.image2}
       <div class="image2">
-        <a href="#">
-          <img src="/images/objects/{room.image_alternative}.jpg" alt="" />
-        </a>
+
+        <img
+          src="/images/objects/{room.image2}.jpg"
+          alt=""
+          on:click={() => (showImage2 = true)} />
+
       </div>
     {/if}
     <!-- Text-->
-    {#if room.description}
+    {#if room.text}
       <div class="text">
-        <p>{room.description}</p>
+        <p>{room.text}</p>
       </div>
     {/if}
     {#if room.rights && room.rightsowner}
@@ -462,6 +572,19 @@ too small or big for respectively narrow or wide screens */
         <div class="rights_font">Rechte:</div>
         <div class="small">{room.rights}</div>
       </div>
+    {/if}
+    {#if room.landscape}
+      <div class="image_landscape">
+
+        <img
+          src="/images/objects/{room.landscape}.jpg"
+          alt=""
+          on:click={() => (showImageLandscape = true)} />
+
+      </div>
+    {/if}
+    {#if room.caption}
+      <div class="caption">{room.caption}</div>
     {/if}
   </div>
 </div>

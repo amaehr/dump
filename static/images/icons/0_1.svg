@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 0 888 2065"
-   height="2065"
-   width="888"
-   id="svg2"
-   version="1.1">
-  <metadata
-     id="metadata8">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs6" />
-  <g
-     id="g10">
-    <image
-       id="image12"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA3gAAAgRCAYAAAC8kkAmAAG9sElEQVR4AezdCWidVd7H8V/SNHub
+<svg height="2065" viewBox="0 0 888 2065" width="888" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image height="2065" image-rendering="optimizeQuality" preserveAspectRatio="none" width="888" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA3gAAAgRCAYAAAC8kkAmAAG9sElEQVR4AezdCWidVd7H8V/SNHub
 22ntJkluOnVlmN44OoCSt5myaNl6HSiLLE1YhlVaAQFliQrKTkaFYRAwCsMAClNZBkHQ1qk4DFM0
 bWeattAmmneqtZPNJrk3adK+9394Djzct7FLlnvPc78fOJxbAknRJL2/5/8//1MlAMCaeu211zKS
 UpLSbt3eoKTJaA1qCQAAAFWFNxpaFQCATLTSkvbGAt1yjUTr82g/7vYVBQAACHgAQKDrtjAX7Snd
@@ -2030,11 +2000,4 @@ AAi8UwBg+2e7xiCFq5bNmDvqdK4ZdP0AIPAmAoDtnyX0Njz5MB8bLWvQlauWR425Xv3eTt90DkDg
 AeCaZ6cGX42/aUOZxK2t/Znl5e0sLCw0F6CIOQCBB8DEEXymcXUKd/ZsmrKyMszq6ucUi4uL2ceg
 ccWyX79uABB4AMzlIpcafaf1lp+NlvfvfzjqRG7QDDkbLQHGZykAMME2N98NknTr11zgsl6/jRN/
 t4/BcJitJL8n2UhVI67oNUJuZAAwwQPAApedid//avTVj0OuTu7Wr0FX4xqAabCQPAoAzIlOquNf
-9azheGw1nEalXn88ZsQBMGP+AvwfN0kuqGUxAAAAAElFTkSuQmCC
-"
-       style="image-rendering:optimizeQuality"
-       preserveAspectRatio="none"
-       height="2065"
-       width="888" />
-  </g>
-</svg>
+9azheGw1nEalXn88ZsQBMGP+AvwfN0kuqGUxAAAAAElFTkSuQmCC"/></svg>

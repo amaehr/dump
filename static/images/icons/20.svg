@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   viewBox="0 0 512 512"
-   height="512"
-   width="512"
-   id="svg2"
-   version="1.1">
-  <metadata
-     id="metadata8">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
-  <defs
-     id="defs6" />
-  <g
-     id="g10">
-    <image
-       id="image12"
-       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAGQcklEQVR4AezBgQAAAACAoP2pF6kC
+<svg height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image height="512" image-rendering="optimizeQuality" preserveAspectRatio="none" width="512" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAGQcklEQVR4AezBgQAAAACAoP2pF6kC
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAGD27AFGrigK4/g3rPlQu1HdRkVUm0GNsEFtm1Ed1bZt27btBuvRl5e73lHd7vkn
 v5zXrnnuvP2N2cmJisiBsshpTcCFSCuO3CgCEwZfUkctaGhA7WCgF/WjMdAxk3MBLeP1BtpOB+ko
@@ -1827,11 +1797,4 @@ Wgoj36YpNZmGRKqM7t/gz/D7usLPyMjIyMgY6GoDs9+itGgI6WY4saZD9FbRApErUOZW1Y6RB6ii
 f0WerKrOi7wi8qbuyoVHEc1V9ULkGyjmMdQpeewN9mFfPRJ5R+SN3f0Rzo48PvKvkXujtq9oLRoq
 tWsOpuNVNZlqGsb77V/XxpaEzXl1///YgwMBAAAAAEH+1isMUHEAAAAAAAAAAAAAAAAAAAAAAAAA
 AFB7cCwAAAAAMMjfehI7KwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAADgR6WtnH18lnVQAAAABJRU5ErkJggg==
-"
-       style="image-rendering:optimizeQuality"
-       preserveAspectRatio="none"
-       height="512"
-       width="512" />
-  </g>
-</svg>
+AAAAAAAADgR6WtnH18lnVQAAAABJRU5ErkJggg=="/></svg>
