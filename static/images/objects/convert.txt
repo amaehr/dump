@@ -1,0 +1,1 @@
+gfind . -iname '*.jpg' -o -iname '*.png' -o -iname '*.tif' -exec convert {} -verbose -resize 1920x1080 {} \;
